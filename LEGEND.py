@@ -8,7 +8,6 @@ import time
 from pymongo import MongoClient
 from datetime import datetime, timedelta
 from threading import Thread
-import aiohttp
 from telebot import types
 
 loop = asyncio.get_event_loop()
