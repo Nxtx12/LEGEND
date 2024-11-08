@@ -10,7 +10,6 @@ from datetime import datetime, timedelta
 from threading import Thread
 from telebot import types
 
-loop = asyncio.get_event_loop()
 
 TOKEN = '7804416833:AAFVrssJiJmYjhImv_lJnTTPKyV9Kr7Bbzs'
 FORWARD_CHANNEL_ID = -6496337480
