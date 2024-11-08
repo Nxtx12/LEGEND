@@ -85,7 +85,6 @@ def create_inline_keyboard():
     return markup
 
 def extend_and_clean_expired_users():
-    for user in users_cursor:
         user_id = user.get("user_id")
         username = user.get("username", "Unknown User")
         time_approved_str = user.get("time_approved")
