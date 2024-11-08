@@ -85,7 +85,6 @@ def create_inline_keyboard():
     return markup
 
 def extend_and_clean_expired_users():
-    users_cursor = users_collection.find()
     for user in users_cursor:
         user_id = user.get("user_id")
         username = user.get("username", "Unknown User")
@@ -553,7 +552,6 @@ if __name__ == "__main__":
     asyncio_thread = Thread(target=start_asyncio_thread, daemon=True)
     asyncio_thread.start()
     extend_and_clean_expired_users()
-    logging.info("Starting Codespace activity keeper and Telegram bot...")
     while True:
         try:
             bot.polling(none_stop=True)
