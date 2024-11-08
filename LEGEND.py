@@ -548,7 +548,6 @@ if __name__ == "__main__":
     asyncio_thread = Thread(target=start_asyncio_thread, daemon=True)
     asyncio_thread.start()
     extend_and_clean_expired_users()
-            bot.polling(none_stop=True)
         except Exception as e:
             logging.error(f"An error occurred while polling: {e}")
         logging.info(f"Waiting for {REQUEST_INTERVAL} seconds before the next request...")
