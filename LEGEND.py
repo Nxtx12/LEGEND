@@ -18,7 +18,6 @@ error_channel_id = -6496337480
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
-db = client['rishi']
 users_collection = db.users
 
 bot = telebot.TeleBot(TOKEN)
