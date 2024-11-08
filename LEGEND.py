@@ -85,7 +85,6 @@ def create_inline_keyboard():
     return markup
 
 def extend_and_clean_expired_users():
-        user_id = user.get("user_id")
         username = user.get("username", "Unknown User")
         time_approved_str = user.get("time_approved")
         days = user.get("days", 0)
@@ -549,7 +548,6 @@ if __name__ == "__main__":
     asyncio_thread = Thread(target=start_asyncio_thread, daemon=True)
     asyncio_thread.start()
     extend_and_clean_expired_users()
-    while True:
         try:
             bot.polling(none_stop=True)
         except Exception as e:
