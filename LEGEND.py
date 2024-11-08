@@ -379,7 +379,6 @@ def process_attack_command(message):
 
 
 def start_asyncio_thread():
-    asyncio.set_event_loop(loop)
     loop.run_until_complete(start_asyncio_loop())
 
 @bot.message_handler(commands=['when'])
