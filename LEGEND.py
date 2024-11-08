@@ -131,7 +131,6 @@ def extend_and_clean_expired_users():
             except ValueError as e:
                 logging.error(f"Failed to parse date for user {user_id}: {e}")
 
-    logging.info("Approval times extension and cleanup completed. ✅")
 
 
 
