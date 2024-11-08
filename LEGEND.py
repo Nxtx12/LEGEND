@@ -85,8 +85,6 @@ def create_inline_keyboard():
     return markup
 
 def extend_and_clean_expired_users():
-    logging.info(f"Current Date and Time: {now}")
-
     users_cursor = users_collection.find()
     for user in users_cursor:
         user_id = user.get("user_id")
